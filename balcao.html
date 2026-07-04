@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Infolic | Balcão</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="infolicfavicon.png" />
+  <audio id="clickSound" src="click.mp3" preload="auto"></audio>
+  <script src="script.js"></script>
+</head>
+
+<body>
+
+<div class="app">
+
+  <aside class="sidebar">
+    <figure class="logo">
+      <img src="infolic.png" alt="Infolic Telecom">
+      <span>Infolic Telecom</span>
+    </figure>
+
+    <nav class="menu">
+      <button class="menu-item" id="openAtendimento">👤 <span>Atendimentos</span></button>
+      <button class="menu-item" id="openBalcao">🏪 <span>Balcão</span></button>
+      <button class="menu-item" id="openConfig">⚙️ <span>Configurações</span></button>
+      <button class="menu-item" id="openSupport">🛠️ <span>Suporte</span></button>
+    </nav>
+
+    <div class="theme-toggle">
+     <span class="icon">🌙</span>
+     <label class="switch">
+      <input type="checkbox" id="themeToggle">
+      <span class="slider"></span>
+     </label>
+    </div>
+
+  </aside>
+
+  <main class="content">
+
+    <header class="header">
+      <span class="badge">Balcão</span>
+      <p>Mensagens prontas para facilitar o atendimento no balcão</p>
+    </header>
+
+    <section class="buttons-container">
+
+      <button class="copy-btn" data-text="ABERTURA ATENDIMENTO
+MOTIVO DO CONTATO: 
+RESOLUÇÃO: ">
+        Atendimento
+      </button>
+
+      <button class="copy-btn" data-text="LIBERAÇÃO DE CONFIANÇA
+FATURA EM ABERTO: 
+PRAZO PARA PAGAR: 
+CIENTE DO PRAZO: Ciente
+MEIO DE CONTATO: ">
+        Liberação
+      </button>
+
+      <button class="copy-btn" data-text="RELATO DO CLIENTE: 
+PONTO DE REFERÊNCIA: 
+OBS: 
+O.S ANTERIOR: ">
+        O.S Reparo
+      </button>
+
+      <button class="copy-btn" data-text="ADESÃO
+CONSULTOR: 
+NECESSIDADE DO CLIENTE: 
+PLANO CONTRATADO: 
+TECNOLOGIA: UTP ( ) FTTH ( )
+DATA DE VENCIMENTO: 
+VALOR A RECEBER: 
+DOCUMENTOS OK?: Ok
+DATA DA INSTALAÇÃO: 
+TURNO PREFERENCIAL: 
+FIDELIDADE 1 ANO: Ciente
+MEIO DE CONTATO: ">
+        Adesão
+      </button>
+
+      <button class="copy-btn" data-text="UPGRADE
+PLANO ATUAL: 
+PLANO OFERECIDO: 
+FECHOU PLANO?: Sim
+MODELO DO ROTEADOR: 
+TAXA DE UPGRADE: 
+MOTIVO DO FECHAMENTO: 
+CADASTRO ATUALIZADO?: 
+MEIO DE CONTATO: ">
+        Upgrade
+      </button>
+
+      <button class="copy-btn" data-text="MUDANÇA DE ENDEREÇO
+POSSUI CABEAMENTO?: 
+QUAL A TECNOLOGIA: UTP ( ) FTTH ( )
+RECEBER TAXA?: 
+Rua: 
+Nº: 
+Bairro: 
+PONTO DE REFERÊNCIA: 
+TURNO: 
+CONTATO: 
+AGENDAMENTO: 
+MEIO DE CONTATO: ">
+        Mudança de Endereço
+      </button>
+
+<button class="copy-btn" data-text="INDIQUE UM AMIGO
+CLIENTE QUE INDICOU: 
+CLIENTE INDICADO: 
+DESCONTO APLICADO: ">
+        Indique um Amigo
+      </button>
+
+<button class="copy-btn" data-text="SUSPENSÃO TEMPORÁRIA
+MOTIVO DA SUSPENSÃO: 
+MEIO DE CONTATO: ">
+        Suspensão Temporária
+      </button>
+
+<button class="copy-btn" data-text="REDE INTERNA
+VALOR: 
+MOTIVO: 
+AGENDAMENTO: 
+OBS: Cliente ciente da cobrança de R$3,00 por metro após 10m.">
+        Rede Interna
+      </button>
+
+<button class="copy-btn" data-text="MUDANÇA DE CÔMODO
+VALOR: 
+MOTIVO: 
+AGENDAMENTO: ">
+        Mudança de Cômodo
+      </button>
+
+<button class="copy-btn" data-text="PÓS ATENDIMENTO
+MOTIVO: Pós de reparo técnico
+CONTATO REALIZADO: ( ) COM SUCESSO ( ) SEM SUCESSO / ( ) SATISFEITO ( ) INSATISFEITO">
+        Pós Atendimento
+      </button>
+
+      <button class="copy-btn" data-text="PÓS DE VENDA
+MOTIVO: Pós venda
+CONTATO REALIZADO: ( ) COM SUCESSO ( ) SEM SUCESSO">
+        Pós de Venda
+      </button>
+
+     <button class="copy-btn" data-text="VELOCIDADE DE TESTE
+PLANO ATUAL: 
+PLANO DE TESTE: 
+MODELO DO ROTEADOR: 
+DATA DE RETIRADA: 
+MOTIVO DO TESTE: 
+MEIO DE CONTATO: ">
+        Velocidade de Teste
+      </button>
+
+      <button class="copy-btn" data-text="CANCELAMENTO
+PLANO ATUAL: 
+VALOR: 
+ENDEREÇO: 
+MOTIVO DO CANCELAMENTO: 
+COMODATO: (  )SIM  (  )NÃO
+EQUIPAMENTO ENTREGUE: (  ) SIM  (  )NÃO
+DATA CANCELAMENTO: ">
+        Cancelamento
+      </button>
+
+      <button class="copy-btn" data-text="RECOLHA DE COMODATO
+MOTIVO DO CONTATO: Recolha de comodato por cancelamento
+MODELO DO ROTEADOR: ">
+        Recolha de comodato
+      </button>
+      
+      <button class="copy-btn" data-text="ADESÃO WIFI MESH
+VALOR DA REDE: R$55,00 / R$70,00
+NECESSIDADE: 
+AGENDAMENTO: 
+OBS: Cliente ciente da fidelidade de 12 meses.">
+        Wifi Mesh
+      </button>
+
+      <button class="copy-btn" data-text="ADESÃO PLANO DE TV
+PLANO: (  ) TV HUB LOCAL PRO R$9,99 (  ) TV POWER TO PREMIUM R$69,99
+E-MAIL: 
+CONTATO: ">
+        Adesão TV
+      </button>
+
+      <button class="copy-btn" data-text="ADESÃO CÂMERA
+PLANO: (  ) EXTERNA iM5 5 4MP (  )  INTERNA iM1 2MP (  ) INTERNA 360°
+NECESSIDADE: 
+Taxa de habilitação: TAXA DE INSTALAÇÃO 50,00 EM LOJA! VALOR DO MATERIAL SERÁ ORÇADO NO MOMENTO DA INSTALAÇÃO E SERÁ PAGO AOS TÉCNICOS!
+Data de instalação: 
+E-mail: 
+Contato: 
+PIX: CPS: 30.472.715/0001-08 / SFI: 30.472.715/0004-50 / SJB: 30.472.715/0003-70
+SF-ISP: 49.775.796/0001-43 / SF-BB: 07.452.158/0001-41 / SF-BBISP: 30.472.715/0005-31">
+        Adesão Câmera
+      </button>
+
+    </section>
+
+  </main>
+
+</div>
+
+<!-- MODAIS (mesmos do index) -->
+<div class="modal-overlay" id="configModal">
+
+  <div class="modal">
+
+    <button class="modal-close" aria-label="Fechar">✕</button>
+
+    <h2>Configurações</h2>
+    <p>
+      Não tem configuração no momento.<br>
+      Precisou de alguma coisa? Só lamento 😅
+    </p>
+
+  </div>
+
+</div>
+<div class="modal-overlay" id="supportModal">
+
+  <div class="modal">
+
+    <button class="modal-close" aria-label="Fechar">✕</button>
+
+    <h2>Suporte 😅</h2>
+    <p>
+      Temos uma equipe de suporte incrível à disposição.<br><br>
+
+      <strong>Uma equipe de um homem só.</strong> 😂<br>
+      É ele que resolve, ajusta, quebra a cabeça e faz mágica.<br><br>
+
+      Se precisar de qualquer coisa, é só chamar:<br>
+      <strong>
+        <a href="https://wa.me/5521991561204" target="_blank">
+          (21) 99156-1204
+        </a>
+      </strong>
+    </p>
+
+  </div>
+
+</div>
+
+<div class="toast" id="toast">Mensagem copiada!</div>
+
+</body>
+</html>
+

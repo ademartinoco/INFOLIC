@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Infolic | SAC</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="infolicfavicon.png" />
+  <audio id="clickSound" src="click.mp3" preload="auto"></audio>
+  <link rel="icon" type="image/png" href="infolicicon.png">
+  <script src="script.js"></script>
+</head>
+
+<body>
+<div class="modal-overlay" id="configModal">
+
+  <div class="modal">
+
+    <button class="modal-close" aria-label="Fechar">✕</button>
+
+    <h2>Configurações</h2>
+    <p>
+      Não tem configuração no momento.<br>
+      Precisou de alguma coisa? Só lamento 😅
+    </p>
+
+  </div>
+
+</div>
+<div class="modal-overlay" id="supportModal">
+
+  <div class="modal">
+
+    <button class="modal-close" aria-label="Fechar">✕</button>
+
+    <h2>Suporte 😅</h2>
+    <p>
+      Temos uma equipe de suporte incrível à disposição.<br><br>
+
+      <strong>Uma equipe de um homem só.</strong> 😂<br>
+      É ele que resolve, ajusta, quebra a cabeça e faz mágica.<br><br>
+
+      Se precisar de qualquer coisa, é só chamar:<br>
+      <strong>
+        <a href="https://wa.me/5521991561204" target="_blank">
+          (21) 99156-1204
+        </a>
+      </strong>
+    </p>
+
+  </div>
+
+</div>
+<div class="app">
+
+  <aside class="sidebar">
+    <figure class="logo">
+      <img src="infolic.png" alt="Infolic Telecom">
+      <span>Infolic Telecom</span>
+    </figure>
+
+    <nav class="menu">
+      <button class="menu-item" id="openAtendimento">👤 <span>Atendimentos</span></button>
+      <button class="menu-item" id="openBalcao">🏪 <span>Balcão</span></button>
+      <button class="menu-item" id="openConfig">⚙️ <span>Configurações</span></button>
+      <button class="menu-item" id="openSupport">🛠️ <span>Suporte</span></button>
+    </nav>
+
+    <div class="theme-toggle">
+     <span class="icon">🌙</span>
+     <label class="switch">
+      <input type="checkbox" id="themeToggle">
+      <span class="slider"></span>
+     </label>
+    </div>
+
+  </aside>
+
+  <main class="content">
+
+    <header class="header">
+      <span class="badge">SAC</span>
+      <p>Mensagens prontas para facilitar sua criação de atendimento</p>
+    </header>
+
+    <section class="buttons-container">
+
+      <button class="copy-btn" data-text="ABERTURA ATENDIMENTO
+MOTIVO DO CONTATO: 
+RESOLUÇÃO: 
+N° PROTOCOLO: ">
+        Atendimento
+      </button>
+
+      <button class="copy-btn" data-text="LIBERAÇÃO DE CONFIANÇA
+FATURA EM ABERTO: 
+PRAZO PARA PAGAR: 
+CIENTE DO PRAZO: Ciente
+MEIO DE CONTATO: 
+N° PROTOCOLO: ">
+        Liberação
+      </button>
+
+      <button class="copy-btn" data-text="RELATO DO CLIENTE: 
+PONTO DE REFERÊNCIA: 
+OBS: 
+O.S ANTERIOR: 
+N° PROTOCOLO: ">
+        O.S Reparo
+      </button>
+
+      <button class="copy-btn" data-text="ANIVERSARIANTE
+MOTIVO: Aniversariante do dia
+RESOLUÇÃO: Mensagem padrão de aniversário
+N° PROTOCOLO: ">
+        Aniversariante
+      </button>
+
+      <button class="copy-btn" data-text="ADESÃO
+CONTRATO: ( ) JÁ PROTOCOLADO ( ) LEVAR PARA CLIENTE ASSINAR ( ) CLIENTE VAI ASSINAR DIGITAL
+CONSULTOR: 
+NECESSIDADE DO CLIENTE: 
+PLANO CONTRATADO: 
+TECNOLOGIA: UTP ( ) FTTH ( )
+DATA DE VENCIMENTO: 
+VALOR A RECEBER: 
+DOCUMENTOS OK?: Ok
+DATA DA INSTALAÇÃO: 
+TURNO PREFERENCIAL: 
+FIDELIDADE 1 ANO: Ciente
+MEIO DE CONTATO: 
+N° PROTOCOLO: ">
+        Adesão
+      </button>
+
+      <button class="copy-btn" data-text="UPGRADE
+CONTRATO: ( ) JÁ PROTOCOLADO ( ) LEVAR PARA CLIENTE ASSINAR ( ) CLIENTE VAI ASSINAR DIGITAL
+PLANO ATUAL: 
+PLANO OFERECIDO: 
+FECHOU PLANO?: Sim
+MODELO DO ROTEADOR: 
+TAXA DE UPGRADE: 
+MOTIVO DO FECHAMENTO: 
+CADASTRO ATUALIZADO?: 
+MEIO DE CONTATO: 
+N° PROTOCOLO: 
+Obs: Cliente ciente da atualização do plano e da renovação de fidelidade por 12 meses.">
+        Upgrade
+      </button>
+
+      <button class="copy-btn" data-text="MUDANÇA DE ENDEREÇO
+POSSUI CABEAMENTO?: 
+QUAL A TECNOLOGIA: UTP ( ) FTTH ( )
+CONTRATO: JÁ PROTOCOLADO ( ) ASSINATURA DIGITAL ( ) LEVAR PARA CLIENTE ASSINAR ( )
+RECEBER TAXA?: 
+Rua: 
+Nº: 
+Bairro: 
+PONTO DE REFERÊNCIA: 
+TURNO: 
+CONTATO: 
+AGENDAMENTO: 
+MEIO DE CONTATO: 
+N° PROTOCOLO: ">
+        Mudança de Endereço
+      </button>
+
+      <!--<button class="copy-btn" data-text="O.S RESOLVIDO POR TELEFONE
+RELATO DO CLIENTE: 
+TESTES REALIZADOS: 
+RESOLUÇÃO: 
+MEIO DE CONTATO: Telefone
+N° PROTOCOLO: ">
+        O.S Resolvida por Telefone
+      </button>-->
+
+      <button class="copy-btn" data-text="INDIQUE UM AMIGO
+CLIENTE QUE INDICOU: 
+CLIENTE INDICADO: 
+DESCONTO APLICADO: ">
+        Indique um Amigo
+      </button>
+
+      <button class="copy-btn" data-text="REDE INTERNA
+VALOR: 
+MOTIVO: 
+AGENDAMENTO: 
+PROTOCOLO: 
+OBS: Cliente ciente da cobrança de R$3,00 por metro após 10m.">
+        Rede Interna
+      </button>
+
+      <button class="copy-btn" data-text="MUDANÇA DE CÔMODO
+VALOR: 
+MOTIVO: 
+AGENDAMENTO: 
+PROTOCOLO: ">
+        Mudança de Cômodo
+      </button>
+
+      <button class="copy-btn" data-text="PÓS ATENDIMENTO
+MOTIVO: Pós de reparo técnico
+CONTATO REALIZADO: ( ) COM SUCESSO ( ) SEM SUCESSO / ( ) SATISFEITO ( ) INSATISFEITO
+N° PROTOCOLO: ">
+        Pós Atendimento
+      </button>
+
+      <button class="copy-btn" data-text="PÓS DE VENDA
+MOTIVO: Pós venda
+CONTATO REALIZADO: ( ) COM SUCESSO ( ) SEM SUCESSO
+N° PROTOCOLO: ">
+        Pós de Venda
+      </button>
+
+      <button class="copy-btn" data-text="PESQUISA DE SATISFAÇÃO (SEM ABRIR O.S A MAIS DE 90 DIAS)
+DATA DO CONTATO: 
+RELATO: Cliente informou que está tudo funcionando perfeitamente e que está satisfeito com o serviço / Cliente não atendeu as tentativas de contato telefônico
+PROTOCOLO: ">
+        Pesquisa de Satisfação
+      </button>
+
+      <button class="copy-btn" data-text="PESQUISA DE NPS
+CLIENTE ATENDEU: ( ) SIM ( ) NÃO
+NOTA: 
+SUGESTÃO DE MELHORIA: 
+PROTOCOLO: ">
+        Pesquisa de NPS
+      </button>
+
+      <button class="copy-btn" data-text="VELOCIDADE DE TESTE
+PLANO ATUAL: 
+PLANO DE TESTE: 
+MODELO DO ROTEADOR: 
+DATA DE RETIRADA: 
+MOTIVO DO TESTE: 
+MEIO DE CONTATO: 
+N° PROTOCOLO: ">
+        Velocidade de Teste
+      </button>
+
+      <button class="copy-btn" data-text="ADESÃO WIFI MESH
+VALOR DA REDE: R$55,00 / R$70,00
+AGENDAMENTO: 
+OBS: 
+N° PROTOCOLO: 
+OBS: Cliente ciente da fidelidade de 12 meses.">
+        Wifi Mesh
+      </button>
+
+      <button class="copy-btn" data-text="ADESÃO PLANO DE TV
+PLANO: (  ) TV HUB LOCAL PRO R$9,99 (  ) TV POWER TO PREMIUM R$69,99
+E-MAIL: 
+CONTATO: 
+N° PROTOCOLO: ">
+        Adesão TV
+      </button>
+
+      <button class="copy-btn" data-text="ADESÃO CÂMERA
+PLANO: (  ) EXTERNA iM5 5 4MP (  )  INTERNA iM1 2MP (  ) INTERNA 360°
+Taxa de habilitação: TAXA DE INSTALAÇÃO 50,00 EM LOJA! VALOR DO MATERIAL SERÁ ORÇADO NO MOMENTO DA INSTALAÇÃO E SERÁ PAGO AOS TÉCNICOS!
+Data de instalação: 
+E-mail: 
+OBS: 
+PIX: CPS: 30.472.715/0001-08 / SFI: 30.472.715/0004-50 / SJB: 30.472.715/0003-70
+SF-ISP: 49.775.796/0001-43 / SF-BB: 07.452.158/0001-41 / SF-BBISP: 30.472.715/0005-31
+N° PROTOCOLO: 
+FIDELIDADE: Cliente ciente da fidelidade de 18 meses">
+        Adesão Câmera
+      </button>
+
+      <button class="copy-btn" data-text="ABERTURA ATENDIMENTO
+MOTIVO DO CONTATO: Envio de Comprovante de Pagamento
+RESOLUÇÃO: Enviado ao financeiro pelo discord
+N° PROTOCOLO: ">
+        Comprovante
+      </button>
+      
+      <button class="copy-btn" data-text="ABERTURA ATENDIMENTO
+MOTIVO DO CONTATO: Cliente sem conexão devido a rede parada
+RESOLUÇÃO: Rede Parada / Atendimento em aberto
+N° PROTOCOLO: ">
+        Rede Parada
+      </button>
+      
+    </section>
+
+  </main>
+
+</div>
+
+<div class="toast" id="toast">Mensagem copiada!</div>
+
+</body>
+</html>
